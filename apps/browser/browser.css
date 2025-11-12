@@ -1,0 +1,110 @@
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar {
+  width: 5px;               /* scrollbar width */
+}
+body::selection {
+  background-color: aliceblue;
+  color: black;
+}
+iframe {
+  width: 100%;
+  height: 92vh;
+  margin-top: 5vh;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+input {
+  top: 2px;
+  display: flex;
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  height: 5vh;
+  background-color: rgb(168, 168, 168,0.5);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  border-radius: 200px;
+  padding: 0 10px;
+  font-size: 3vh;
+  transition: 0.15s;
+}
+input:focus {
+  outline: solid 2px rgb(196, 196, 196);
+}
+input:active {
+  transform: scale(1.01);
+}
+button {
+  top: 2px;
+  display: flex;
+  position: fixed;
+  background-color: rgb(168, 168, 168,0.5);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  height: 5vh;
+  aspect-ratio: 1/1;
+  border-radius: 200px;
+  left: 78%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  transition: 0.15s;
+}
+button:active {
+  transform: scale(1.1);
+}
+div {
+  transition: 0.15s;
+  left: 18.5%;
+  top: 2px;
+  display: flex;
+  position: fixed;
+  background-color: rgb(168, 168, 168,0.5);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  height: 5vh;
+  aspect-ratio: 2/1;
+  border-radius: 200px;
+  justify-content: center;
+  align-items: center;
+}
+div:active {
+  transform: scale(1.05);
+}
+div button {
+  left: unset;
+  height: 5vh;
+  position: unset;
+  background-color: transparent;
+  border: transparent;
+}
+section {
+  display: flex;
+  position: fixed;
+  width: 15%;
+  height: unset;
+  background-color: rgb(204, 204, 204);
+  padding: 10px;
+  border-radius: 40px;
+  top: 6vh;
+  left: 12%;
+  flex-wrap: wrap;
+  transition: 0.15s;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+section:active {
+  transform: scale(1.01);
+}
+section button {
+  left: unset;
+  position: unset;
+  background-color: transparent;
+  border: none;
+}
+section button:active {
+  transform: scale(1.02);
+}

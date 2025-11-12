@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app_windows/windows.css">
+  <link rel="stylesheet" href="apps/apps.css">
+  <link rel="stylesheet" href="apps/settings/settings.css">
+  <title>TKWebOS</title>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body id="body">
+
+  <div id="loading-animation">
+    <video id="loading-video" muted autoplay src="videos/loading screen.mov"></video>
+  </div>
+
+  <img src="images/wallpapers/background_one.jpg" alt="" id="background" style="filter: blur(0px) brightness(100%);">
+
+  <nav id="menu-bar">
+    <div>
+      <button><ion-icon name="desktop-outline"></ion-icon></button>
+      <button>TKWebOS</button>
+      <button id="reload-btn"><ion-icon name="refresh-outline"></ion-icon></button>
+    </div>
+    <div>
+      <button><ion-icon name="battery-HALF-outline"></ion-icon></button>
+      <button><ion-icon name="wifi-outline"></ion-icon></button>
+      <button><ion-icon name="stopwatch-outline"></ion-icon></button>
+      <button id="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+      <button id="control-center-btn"><ion-icon name="options-outline"></ion-icon></button>
+      <button id="menu-bar-date">--- --- --</button>
+      <button id="menu-bar-time">-- -- --</button>
+    </div>
+  </nav>
+
+  <div id="control-center" style="display: none;">
+
+    <button id="dark-mode-btn"><ion-icon name="contrast-outline"></ion-icon> Dark mode</button>
+    <button id="blur-btn"><ion-icon name="eyedrop-outline"></ion-icon> Blur</button>
+
+    <div id="wallpapers">
+      <img src="images/wallpapers/background.jpg" alt="" id="wallpaper">
+      <img src="images/wallpapers/background_one.jpg" alt="" id="wallpaper-one">
+      <img src="images/wallpapers/background_two.jpg" alt="" id="wallpaper-two">
+      <img src="images/wallpapers/background_three.jpg" alt="" id="wallpaper-three">
+      <img src="images/wallpapers/background_four.jpg" alt="" id="wallpaper-four">
+      <img src="images/wallpapers/background_five.jpg" alt="" id="wallpaper-five">
+      <img src="images/wallpapers/background_six.jpg" alt="" id="wallpaper-six">
+      <img src="images/wallpapers/background_seven.jpg" alt="" id="wallpaper-seven">
+      <img src="images/wallpapers/background_eight.jpg" alt="" id="wallpaper-eight">
+      <img src="images/wallpapers/background_nine.jpg" alt="" id="wallpaper-nine">
+    </div>
+
+  </div>
+
+  <div id="dock">
+    <div id="settings" class="app-icon"></div>
+    <div id="app-store" class="app-icon"></div>
+    <div id="photos" class="app-icon"></div>
+    <div id="calculator" class="app-icon"></div>
+    <div id="mail" class="app-icon"></div>
+    <div id="browser" class="app-icon"></div>
+    <div id="calendar" class="app-icon">
+      <p id="calendar-icon-week-day"
+        style="margin: 10px 0 0 0; font-weight: 600; text-align: center; color: rgb(255, 0, 0);">error</p>
+      <p id="calendar-icon-date" style="font-size: 30px; margin: 0; text-align: center; transition: 0.2s;">?</p>
+    </div>
+    <div id="files" class="app-icon"></div>
+  </div>
+
+  <!-- Dynamic Island -->
+  <div id="dynamic-island" style="display: flex;"></div>
+
+  <!-- Version -->
+  <p style="display: flex; position: fixed; color: white; text-shadow: 0 0 15px black; bottom: 5px; padding-right: 50px; right: 0px; font-size: 20px;">Beta 1.3</p>
+  <!--APPS  HERE-->
+
+
+  <!-- Settings Window -->
+
+  <section style="display: flex;" id="windows-container">
+
+    <div id="settings-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Settings</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+        <div class="settings-menu">
+          <button>Personalise</button>
+          <button>Taskbar</button>
+          <button>Sound</button>
+        </div>
+        <div class="settings-info">
+          <h1>Taskbar</h1>
+          <div id="settings-info-personalise" style="display: none;"></div>
+          <div id="settings-info-taskbar">
+            <div id="settings-info-taskbar-shape">
+              <p>Taskbar Shape</p>
+              <button id="floating-taskbar-btn">floating</button>
+              <button id="full-width-taskbar-btn">full width</button>
+            </div>
+          </div>
+          <div id="settings-info-sound" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Store Window -->
+    <div id="app-store-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>App Store</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+      </div>
+    </div>
+
+    <!-- Browser -->
+    <div id="browser-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Safari</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+         <iframe id="browser-iframe" src="/apps/browser/browser.html" style="background-color: transparent; width: 100%; height: 100%; overflow: hidden;" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <!-- Photos Window -->
+    <div id="photos-window" class="app-window" style="background-color: rgba(128, 128, 128, 0.39);">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Photos</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+      </div>
+    </div>
+
+    <!-- Calculator Window -->
+    <div id="calculator-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Calculator</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+         <iframe style="width: 100%; height: 100%;" src="https://poxel.io/" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <!-- Mail Window -->
+    <div id="mail-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Mail</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+      </div>
+    </div>
+
+    <!-- Calendar Window -->
+    <div id="calendar-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Calendar</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+      </div>
+    </div>
+
+    <!-- Files Window -->
+    <div id="files-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Files</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+        <div>
+          <img src="images/app_icons/files.png" alt="">
+          <p>file(1)</p>
+        </div>
+        <div>
+          <img src="images/app_icons/files.png" alt="">
+          <p>file(2)</p>
+        </div>
+        <div>
+          <img src="images/app_icons/files.png" alt="">
+          <p>file(3)</p>
+        </div>
+        <div>
+          <img src="images/app_icons/files.png" alt="">
+          <p>file(4)</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+</body>
+<script src="script.js"></script>
+<script src="app_windows/windows.js"></script>
+<script src="apps/settings/settings.js"></script>
+
+</html>
