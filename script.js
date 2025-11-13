@@ -7,21 +7,21 @@ const dock = document.getElementById("dock");
 const controlCenter = document.getElementById("control-center");
 const controlCenterBtn = document.getElementById("control-center-btn");
 
-controlCenterBtn.onclick = function() {
-  if(controlCenter.style.display === "none") {
+controlCenterBtn.onclick = function () {
+  if (controlCenter.style.display === "none") {
     controlCenter.style.display = "flex"
     hideTimeout = setTimeout(() => {
-    controlCenter.style.opacity = "1"
+      controlCenter.style.opacity = "1"
     }, 200);
   }
   else {
     controlCenter.style.opacity = "0"
     hideTimeout = setTimeout(() => {
-    controlCenter.style.display = "none"
+      controlCenter.style.display = "none"
     }, 200);
   }
 }
-controlCenter.onmouseleave = function() {
+controlCenter.onmouseleave = function () {
   controlCenter.style.opacity = "0";
   hideTimeout = setTimeout(() => {
     controlCenter.style.display = "none"
@@ -44,16 +44,16 @@ const wallpaperSeven = document.getElementById("wallpaper-seven");
 const wallpaperEight = document.getElementById("wallpaper-eight");
 const wallpaperNine = document.getElementById("wallpaper-nine");
 
-wallpaper.onclick = function() {background.src = "images/wallpapers/background.jpg"}
-wallpaperOne.onclick = function() {background.src = "images/wallpapers/background_one.jpg"}
-wallpaperTwo.onclick = function() {background.src = "images/wallpapers/background_two.jpg"}
-wallpaperThree.onclick = function() {background.src = "images/wallpapers/background_three.jpg"}
-wallpaperFour.onclick = function() {background.src = "images/wallpapers/background_four.jpg"}
-wallpaperFive.onclick = function() {background.src = "images/wallpapers/background_five.jpg"}
-wallpaperSix.onclick = function() {background.src = "images/wallpapers/background_six.jpg"}
-wallpaperSeven.onclick = function() {background.src = "images/wallpapers/background_seven.jpg"}
-wallpaperEight.onclick = function() {background.src = "images/wallpapers/background_eight.jpg"}
-wallpaperNine.onclick = function() {background.src = "images/wallpapers/background_nine.jpg"}
+wallpaper.onclick = function () { background.src = "images/wallpapers/background.jpg" }
+wallpaperOne.onclick = function () { background.src = "images/wallpapers/background_one.jpg" }
+wallpaperTwo.onclick = function () { background.src = "images/wallpapers/background_two.jpg" }
+wallpaperThree.onclick = function () { background.src = "images/wallpapers/background_three.jpg" }
+wallpaperFour.onclick = function () { background.src = "images/wallpapers/background_four.jpg" }
+wallpaperFive.onclick = function () { background.src = "images/wallpapers/background_five.jpg" }
+wallpaperSix.onclick = function () { background.src = "images/wallpapers/background_six.jpg" }
+wallpaperSeven.onclick = function () { background.src = "images/wallpapers/background_seven.jpg" }
+wallpaperEight.onclick = function () { background.src = "images/wallpapers/background_eight.jpg" }
+wallpaperNine.onclick = function () { background.src = "images/wallpapers/background_nine.jpg" }
 
 /**
  * ON LOAD
@@ -90,14 +90,14 @@ reloadBtn.addEventListener("click", () => {
   windowsContainer.style.display = "none";
   loadingAnimation.style.display = "flex";
   loadingAnimation.style.opacity = "1";
-  menuBar.style.opacity ="0"
-  dock.style.opacity ="0"
+  menuBar.style.opacity = "0"
+  dock.style.opacity = "0"
   reloadVideo.playbackRate = 1.0;
   reloadVideo.currentTime = 0;
   reloadVideo.play();
   setTimeout(() => {
-      location.reload();
-    }, 4000);
+    location.reload();
+  }, 4000);
 });
 
 
@@ -105,54 +105,58 @@ reloadBtn.addEventListener("click", () => {
  * Date and time for the menu bar
  */
 function updateDateTime() {
-      const now = new Date();
+  const now = new Date();
 
-      // Date parts
-      const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
-      const month = now.toLocaleDateString('en-US', { month: 'short' });
-      const day = now.getDate();
+  // Date parts
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
+  const month = now.toLocaleDateString('en-US', { month: 'short' });
+  const day = now.getDate();
 
-      document.getElementById("menu-bar-date").textContent =
-        `${weekday} ${month} ${day}`;
+  document.getElementById("menu-bar-date").textContent =
+    `${weekday} ${month} ${day}`;
 
-      // Time parts in 12-hour format
-      let hours = now.getHours();
-      let minutes = now.getMinutes();
-      let ampm = hours >= 12 ? "PM" : "AM";
+  // Time parts in 12-hour format
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let ampm = hours >= 12 ? "PM" : "AM";
 
-      hours = hours % 12;
-      hours = hours ? hours : 12; // 0 becomes 12
-      minutes = minutes < 10 ? "0" + minutes : minutes;
+  hours = hours % 12;
+  hours = hours ? hours : 12; // 0 becomes 12
+  minutes = minutes < 10 ? "0" + minutes : minutes;
 
-      document.getElementById("menu-bar-time").textContent =
-        `${hours}:${minutes} ${ampm}`;
-    }
+  document.getElementById("menu-bar-time").textContent =
+    `${hours}:${minutes} ${ampm}`;
+}
 
-    // Run immediately
-    updateDateTime();
+// Run immediately
+updateDateTime();
 
-    // Update every second
-    setInterval(updateDateTime, 1000);
+// Update every second
+setInterval(updateDateTime, 1000);
 
 /**
  * Date on the calendars app
  */
- function updateCalendarIcon() {
-    const now = new Date();
+function updateCalendarIcon() {
+  const now = new Date();
 
-    // Get weekday name (Mon, Tue, ...)
-    const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
+  // Get weekday name (Mon, Tue, ...)
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
 
-    // Get day of month
-    const day = now.getDate();
+  // Get day of month
+  const day = now.getDate();
 
-    // Update elements
-    document.getElementById("calendar-icon-week-day").textContent = weekday;
-    document.getElementById("calendar-icon-date").textContent = day;
-  }
+  // Update elements
+  document.getElementById("calendar-icon-week-day").textContent = weekday;
+  document.getElementById("calendar-icon-date").textContent = day;
+}
 
-  // Run immediately
-  updateCalendarIcon();
+// Run immediately
+updateCalendarIcon();
 
-  // Update once a minute (in case date changes at midnight)
-  setInterval(updateCalendarIcon, 60 * 1000);
+// Update once a minute (in case date changes at midnight)
+setInterval(updateCalendarIcon, 60 * 1000);
+
+
+const terminalInput = document.getElementById("terminal-input")
+terminalInput.value = ">";
