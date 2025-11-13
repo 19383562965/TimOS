@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="apps/apps.css">
   <link rel="stylesheet" href="apps/settings/settings.css">
   <link rel="stylesheet" href="dynamic_island/dynamic-island.css">
-  <title>TKWebOS</title>
+  <title>TKWebOS (Beta)</title>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -70,6 +70,7 @@
         style="margin: 10px 0 0 0; font-weight: 600; text-align: center; color: rgb(255, 0, 0);">error</p>
       <p id="calendar-icon-date" style="font-size: 30px; margin: 0; text-align: center; transition: 0.2s;">?</p>
     </div>
+    <div id="terminal" class="app-icon">>_</div>
     <div id="files" class="app-icon"></div>
   </div>
 
@@ -235,6 +236,20 @@
           <img src="images/app_icons/files.png" alt="">
           <p>file(4)</p>
         </div>
+      </div>
+    </div>
+
+    <div id="terminal-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Terminal</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+         <input type="text" id="terminal-input">
+         <button id="run-terminal-btn"><ion-icon name="arrow-forward-outline"></ion-icon></button>
       </div>
     </div>
 
