@@ -134,7 +134,7 @@ body.dark-mode #terminal {
   border: solid 2px rgba(255, 255, 255, 0.5);
   height: 50px;
   width: 50px;
-  border-radius: 25px;
+  border-radius: 200px;
   right: 5%;
   justify-content: center;
   align-items: center;
@@ -144,5 +144,5 @@ body.dark-mode #terminal {
 }
 #run-terminal-btn:active {
   transform: scale(1.1) translateX(10px) translateY(-2px);
-  border-radius: 25px 22px 25px 25px;
+  border-radius: 200px 150px 200px 130px;
 }
