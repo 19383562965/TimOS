@@ -8,12 +8,14 @@ body {
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  transition:1s, background-image 1s;
+  transition: 1s, background-image 1s;
   z-index: 1;
 }
+
 input:focus {
   outline: none;
 }
+
 #loading-animation {
   display: flex;
   position: fixed;
@@ -27,15 +29,29 @@ input:focus {
   animation-duration: 9s;
   animation-iteration-count: 1;
 }
+
 #loading-animation video {
   width: 20%;
 }
+
 @keyframes loading {
-  0% {opacity: 1;}
-  40% {opacity: 0.5;}
-  50% {opacity: 0;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
+
 #background {
   position: fixed;
   display: flex;
@@ -48,6 +64,7 @@ input:focus {
   transition: 0.5s;
   z-index: 0;
 }
+
 #menu-bar {
   display: flex;
   position: fixed;
@@ -64,15 +81,18 @@ input:focus {
   justify-content: space-between;
   transition: 0.2s;
 }
+
 body.dark-mode #menu-bar {
   background-color: rgba(0, 0, 0, 0.25);
   color: white;
 }
+
 #menu-bar div {
   display: flex;
   justify-content: center;
   gap: 5px;
 }
+
 #menu-bar div button {
   background-color: transparent;
   border: none;
@@ -80,18 +100,23 @@ body.dark-mode #menu-bar {
   transition: 0.15s;
   border-radius: 5px;
 }
+
 body.dark-mode #menu-bar div button {
   color: white;
 }
+
 #menu-bar div button:hover {
   background-color: rgba(128, 128, 128, 0.2);
 }
+
 #menu-bar div button:active {
   background-color: rgba(128, 128, 128, 0.4);
 }
+
 #menu-bar div button ion-icon {
   font-size: 20px;
 }
+
 #control-center {
   position: fixed;
   display: flex;
@@ -110,10 +135,12 @@ body.dark-mode #menu-bar div button {
   border: solid 1px transparent;
   backdrop-filter: blur(10px);
 }
+
 body.dark-mode #control-center {
   background-color: rgba(0, 0, 0, 0.2);
   border: solid 1px rgba(255, 255, 255, 0.5);
 }
+
 #control-center button {
   width: 42%;
   height: 60px;
@@ -125,11 +152,13 @@ body.dark-mode #control-center {
   font-weight: 600;
   font-size: 15px;
 }
+
 body.dark-mode #control-center button {
   border: solid 1px rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
 }
+
 #wallpapers {
   display: flex;
   width: 90%;
@@ -144,22 +173,28 @@ body.dark-mode #control-center button {
   border-radius: 20px;
   margin-bottom: 10px;
 }
+
 #wallpapers::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
 }
+
 #wallpapers::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
 }
+
 #wallpapers::-webkit-scrollbar {
-  width: 5px;               /* scrollbar width */
+  width: 5px;
+  /* scrollbar width */
 }
+
 #wallpapers img {
   width: 48%;
   aspect-ratio: 3/2;
   border-radius: 10px;
 }
+
 #dock {
   position: fixed;
   display: flex;
@@ -177,13 +212,16 @@ body.dark-mode #control-center button {
   transition: 0.2s;
   border: solid 2px rgba(0, 0, 0, 0.15);
 }
+
 body.dark-mode #dock {
   background-color: rgba(0, 0, 0, 0.2);
   border: solid 2px rgba(255, 255, 255, 0.15);
 }
+
 #dock:hover {
   padding: 10px 15px;
 }
+
 #dock .app-icon {
   height: 100%;
   aspect-ratio: 1/1;
@@ -194,47 +232,78 @@ body.dark-mode #dock {
   background-size: cover;
   cursor: default;
 }
+
 #dock .app-icon:hover {
   transform: scale(1.3) translateY(-10px);
   margin: 0 15px;
 }
+
 body.dark-mode #dock .app-icon {
   background-color: rgb(34, 34, 34);
 }
+
 #settings {
   background-image: url("images/app_icons/settings.jpg");
 }
+
 body.dark-mode #settings {
   background-image: url("images/app_icons/dark_mode/settings.PNG");
 }
+
 #app-store {
   background-image: url("images/app_icons/app_store.jpg");
 }
+
 #browser {
   background-image: url("images/app_icons/safari.png");
   background-position: center;
 }
+
 body.dark-mode #app-store {
   background-image: url("images/app_icons/dark_mode/app_store.PNG");
 }
+
 #photos {
   background-image: url("images/app_icons/photos.png");
 }
+
 #calculator {
   background-image: url("images/app_icons/calculator.jpg");
 }
+
 body.dark-mode #calculator {
   background-image: url("images/app_icons/dark_mode/calculator.PNG");
 }
+
 #mail {
   background-image: url("images/app_icons/mail.jpg");
 }
+
 body.dark-mode #mail {
   background-image: url("images/app_icons/dark_mode/mail.PNG");
 }
+
 body.dark-mode #calendar-icon-date {
   color: white;
 }
+
 #files {
   background-image: url("images/app_icons/files.png");
+}
+
+@media (max-width: 1000px) {
+  body {
+    width: 100%;
+    height: 90vh;
+  }
+  #menu-bar {
+    height: 50px;
+  }
+  #menu-bar button {
+    height: 50px;
+    font-size: 40px;
+  }
+  #dock {
+    transform: scale(1.2) translateX(-40%);
+  }
 }
