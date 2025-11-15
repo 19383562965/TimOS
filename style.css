@@ -305,5 +305,7 @@ body.dark-mode #calendar-icon-date {
   }
   #dock {
     transform: scale(1.2) translateX(-40%);
+    bottom: 10vh;
   }
 }
+
