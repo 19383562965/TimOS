@@ -106,8 +106,12 @@ body.dark-mode #menu-bar {
   border-radius: 5px;
 }
 
+
 body.dark-mode #menu-bar div button {
   color: white;
+}
+#menu-bar div button {
+  color: rgb(0, 0, 0);
 }
 
 #menu-bar div button:hover {
