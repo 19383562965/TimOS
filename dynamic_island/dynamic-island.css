@@ -6,13 +6,17 @@
   top: 0px;
   width: 96px;
   height: 26px;
-  border-radius: 30px;
+  border-radius: 300px;
   background-color: rgb(0, 0, 0);
   z-index: 1;
   border: solid 2px rgba(54, 54, 54, 0.5);
   transition: 0.15s;
   animation: dynamic-island-start 6s ease-out 0s;
   box-shadow: 0 0 100px rgba(255, 255, 255, 0.6);
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
 }
 #dynamic-island:hover {
   width: 100px;
