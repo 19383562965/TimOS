@@ -143,6 +143,7 @@ body.dark-mode #terminal {
   color: white;
 }
 #run-terminal-btn:active {
+  transition: 0.05s;
   transform: scale(1.1) translateX(10px) translateY(-2px);
   border-radius: 200px 150px 200px 130px;
 }
