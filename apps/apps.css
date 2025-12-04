@@ -139,7 +139,7 @@ body.dark-mode #terminal {
   justify-content: center;
   align-items: center;
   font-size: 3vh;
-  transition: 0.15s;
+  transition: 0.2s;
   color: white;
 }
 #run-terminal-btn:active {
