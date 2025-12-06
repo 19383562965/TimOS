@@ -74,4 +74,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const defaultScreenSize = document.getElementById("default-screen-size");
+  const realScreenSize = document.getElementById("real-screen-size");
+
+  defaultScreenSize.onclick = function () {
+    body.style.with = "100%"
+    if (window.innerWidth <= 768) {
+      body.style.height = "90vh";
+    } else if (window.innerWidth <= 1000) {
+      body.style.height = "90vh";
+    } else {
+      body.style.height = "100vh";
+    }
+  }
+
+  realScreenSize.onclick = function () {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    body.style.width = width;
+    body.style.height = height;
+  }
+
 });
