@@ -81,8 +81,8 @@
 
   <!-- Version -->
   <p
-    style="display: flex; position: fixed; color: white; text-shadow: 0 0 15px black; bottom: 5px; padding-right: 50px; right: 0px; font-size: 20px;">
-    Beta 1.3</p>
+    style="display: flex; position: fixed; color: white; text-shadow: 0 0 15px black; top: 92vh; padding-right: 50px; right: 0px; font-size: 20px;">
+    Beta 1.5</p>
   <!--APPS  HERE-->
 
 
@@ -100,13 +100,12 @@
       <div class="window-content">
         <!-- Edit your content here -->
         <div class="settings-menu">
-          <button id="settings-menu-personalise-btn">Personalise</button>
+          <button id="settings-menu-top-bar-btn">Top bar</button>
           <button id="settings-menu-display-btn">Display</button>
           <button id="settings-menu-taskbar-btn">Taskbar</button>
-          <button id="settings-menu-sound-btn">Sound</button>
         </div>
         <div class="settings-info">
-          <div id="settings-info-personalise" style="display: none;"></div>
+
           <div id="settings-info-taskbar" style="display: none;">
             <h1>Taskbar</h1>
             <div id="settings-info-taskbar-shape">
@@ -116,13 +115,21 @@
               <button id="transparent-taskbar-btn">transparent</button>
             </div>
           </div>
-          <div id="settings-info-display">
+          <div id="settings-info-display" style="display: none;">
             <h1>Display</h1>
             <div id="settings-info-display-size">
-              <p>Here you can choose between the default screen size and a custom, device-adapted screen size.</p>
+              <p>Here you can choose between the different height sizes:</p>
               <button id="hundred-screen-height">100vh</button>
               <button id="ninety-five-screen-height">95vh</button>
               <button id="ninety-screen-height">90vh</button>
+            </div>
+          </div>
+          <div id="settings-info-top-bar">
+            <h1>Top bar</h1>
+            <div id="settings-info-top-bar-background">
+              <p style="text-align: center; width: 100%;">Choose between blur and transparent top bar:</p>
+              <button id="blur-top-bar-btn">blur</button>
+              <button id="transparent-top-bar-btn">Transparent</button>
             </div>
           </div>
           <div id="settings-info-sound" style="display: none;"></div>
