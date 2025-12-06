@@ -100,18 +100,28 @@
       <div class="window-content">
         <!-- Edit your content here -->
         <div class="settings-menu">
-          <button>Personalise</button>
-          <button>Taskbar</button>
-          <button>Sound</button>
+          <button id="settings-menu-personalise-btn">Personalise</button>
+          <button id="settings-menu-display-btn">Display</button>
+          <button id="settings-menu-taskbar-btn">Taskbar</button>
+          <button id="settings-menu-sound-btn">Sound</button>
         </div>
         <div class="settings-info">
-          <h1>Taskbar</h1>
           <div id="settings-info-personalise" style="display: none;"></div>
-          <div id="settings-info-taskbar">
+          <div id="settings-info-taskbar" style="display: none;">
+            <h1>Taskbar</h1>
             <div id="settings-info-taskbar-shape">
               <p>Taskbar Shape</p>
               <button id="floating-taskbar-btn">floating</button>
               <button id="full-width-taskbar-btn">full width</button>
+              <button id="transparent-taskbar-btn">transparent</button>
+            </div>
+          </div>
+          <div id="settings-info-display">
+            <h1>Display</h1>
+            <div id="settings-info-display-size">
+              <p>Here you can choose between the default screen size and a custom, device-adapted screen size.</p>
+              <button>default</button>
+              <button>screen</button>
             </div>
           </div>
           <div id="settings-info-sound" style="display: none;"></div>
