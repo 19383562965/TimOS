@@ -228,10 +228,6 @@ body.dark-mode #dock {
   border: solid 2px rgba(255, 255, 255, 0.15);
 }
 
-#dock:hover {
-  padding: 10px 15px;
-}
-
 #dock .app-icon {
   height: 100%;
   aspect-ratio: 1/1;
