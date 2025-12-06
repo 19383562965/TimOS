@@ -306,7 +306,7 @@ body.dark-mode #calendar-icon-date {
   background-image: url("images/app_icons/files.png");
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
   body {
     width: 100%;
     height: 90vh;
