@@ -16,7 +16,7 @@
 <body id="body">
 
   <div id="loading-animation">
-    
+
   </div>
 
   <img src="images/wallpapers/background_three.jpg" alt="" id="background" style="filter: blur(0px) brightness(100%);">
@@ -62,6 +62,24 @@
     <div id="photos" class="app-icon"></div>
     <div id="calculator" class="app-icon"></div>
     <div id="mail" class="app-icon"></div>
+    <div id="clock" class="app-icon">
+      <div class="clock-number number12">12</div>
+      <div class="clock-number number1">I</div>
+      <div class="clock-number number2">I</div>
+      <div class="clock-number number3">3</div>
+      <div class="clock-number number4">I</div>
+      <div class="clock-number number5">I</div>
+      <div class="clock-number number6">6</div>
+      <div class="clock-number number7">I</div>
+      <div class="clock-number number8">I</div>
+      <div class="clock-number number9">9</div>
+      <div class="clock-number number10">I</div>
+      <div class="clock-number number11">I</div>
+
+      <div class="hand hour" id="hand-hour"></div>
+      <div class="hand minute" id="hand-minute"></div>
+      <div class="hand second" id="hand-second"></div>
+    </div>
     <div id="browser" class="app-icon"></div>
     <div id="calendar" class="app-icon">
       <p id="calendar-icon-week-day"
@@ -213,6 +231,19 @@
       </div>
     </div>
 
+    <!-- Clock Window -->
+    <div id="clock-window" class="app-window">
+      <div class="title-bar">
+        <button class="close-window"></button>
+        <button class="hide-window"></button>
+        <button class="fullscreen-window"></button>
+        <p>Clock</p>
+      </div>
+      <div class="window-content">
+        <!-- Edit your content here -->
+      </div>
+    </div>
+
     <!-- Calendar Window -->
     <div id="calendar-window" class="app-window">
       <div class="title-bar">
@@ -284,6 +315,6 @@
 <script src="app_windows/windows.js"></script>
 <script src="dynamic_island/dynamic-island.js"></script>
 <script src="apps/settings/settings.js"></script>
+<script src="apps/clock/clock.js"></script>
 
 </html>
-
