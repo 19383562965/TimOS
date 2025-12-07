@@ -226,7 +226,7 @@ body.dark-mode #control-center button {
   bottom: 20px;
   border-radius: 32px;
   padding: 10px;
-  height: 70px;
+  height: 80px;
   gap: 10px;
   backdrop-filter: blur(10px);
   transition: 0.2s;
@@ -302,6 +302,125 @@ body.dark-mode #calculator {
 
 body.dark-mode #mail {
   background-image: url("images/app_icons/dark_mode/mail.PNG");
+}
+
+#clock {
+  background-color: aliceblue;
+  position: relative;
+}
+
+body.dark-mode #clock {
+  background-color: black;
+}
+
+#clock::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(0, 0, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+body.dark-mode #clock::after {
+  background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(0, 0, 0);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  background-color: black;
+  border-radius: 10px;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.hour {
+  width: 3px;
+  height: 18px;
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+  transition: 0.5s;
+}
+body.dark-mode .hour {
+  background-color: rgb(255, 255, 255);
+}
+
+.minute {
+  width: 2px;
+  height: 25px;
+  background-color: rgb(3, 3, 3);
+  z-index: 4;
+  transition: 0.5s;
+}
+body.dark-mode .minute {
+  background-color: rgb(223, 223, 223);
+}
+
+.second {
+  width: 1.5px;
+  height: 30px;
+  background-color: rgb(255, 0, 0);
+  z-index: 5;
+  transition: 0.2s;
+}
+
+.clock-number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-origin: center;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  font-size: 10px;
+}
+body.dark-mode .clock-number {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.number1 {
+  transform: rotate(30deg) translateY(5px);
+}
+.number2 {
+  transform: rotate(60deg) translateY(5px);
+}
+.number3 {
+  transform: rotate(90deg) translateY(5px);
+}
+.number4 {
+  transform: rotate(120deg) translateY(5px);
+}
+.number5 {
+  transform: rotate(150deg) translateY(5px);
+}
+.number6 {
+  transform: rotate(180deg) translateY(5px);
+}
+.number7 {
+  transform: rotate(210deg) translateY(5px);
+}
+.number8 {
+  transform: rotate(240deg) translateY(5px);
+}
+.number9 {
+  transform: rotate(270deg) translateY(5px);
+}
+.number10 {
+  transform: rotate(300deg) translateY(5px);
+}
+.number11 {
+  transform: rotate(330deg) translateY(5px);
+}
+.number12 {
+  transform: rotate(360deg) translateY(5px);
 }
 
 body.dark-mode #calendar-icon-date {
