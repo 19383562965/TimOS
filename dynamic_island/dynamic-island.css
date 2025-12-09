@@ -12,7 +12,6 @@
   border: solid 2px rgba(54, 54, 54, 0.5);
   transition: 0.15s;
   animation: dynamic-island-start 2s ease-out 0s;
-  box-shadow: 0 0 100px rgba(255, 255, 255, 0.6);
   user-select: none; /* Standard */
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
