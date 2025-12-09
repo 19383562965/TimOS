@@ -101,6 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const hundredScreenHeight = document.getElementById("hundred-screen-height");
   const ninetyFiveScreenHeight = document.getElementById("ninety-five-screen-height");
   const ninetyScreenHeight = document.getElementById("ninety-screen-height");
+  const eightyFiveScreenHeight = document.getElementById("eighty-five-screen-height");
+  const saveScreenHeight = document.getElementById("save-screen-height");
+  const screenHeightInput = document.getElementById("input-screen-height");
 
   hundredScreenHeight.onclick = function () {
     body.style.height = "100vh";
@@ -117,6 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.height = "90vh";
     localStorage.setItem("screen height", "90");
   };
+  eightyFiveScreenHeight.onclick = function () {
+    body.style.height = "85vh";
+    localStorage.setItem("screen height", "85");
+  };
+  saveScreenHeight.onclick = function () {
+  const valueScreenHeight = screenHeightInput.value;
+  body.style.height = valueScreenHeight + "vh";
+  localStorage.setItem("screen height", valueScreenHeight);
+};
+
 
   body.style.height = localStorage.getItem("screen height") + "vh";
 
