@@ -95,7 +95,7 @@ clockStartBtn.onclick = function() {
       doneTimeout = setTimeout(() => {
         dynamicIsland.style.width = "96px";
         dynamicIsland.style.height = "26px";
-        dynamicIsland.style.top = "0px";
+        dynamicIsland.style.top = "5px";
         dynamicIsland.innerHTML = "";
       }, 3000);
     }
@@ -105,7 +105,7 @@ clockStartBtn.onclick = function() {
   shrinkTimeout = setTimeout(() => {
     dynamicIsland.style.width = "200px";
     dynamicIsland.style.height = "26px";
-    dynamicIsland.style.top = "0px";
+    dynamicIsland.style.top = "5px";
     timerDisplay.style.fontSize = "20px";
   }, 2000);
 };
