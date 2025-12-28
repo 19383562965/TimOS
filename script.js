@@ -164,8 +164,10 @@ exitBtn.onclick = () => {
 
 document.getElementById("save-background-btn").onclick = function() {
   localStorage.setItem("background", background.src)
+
+  const savedBackground = localStorage.getItem("background");
 }
-if(localStorage.getItem("background") === "") {
+if(!savedBackground) {
   console.log("no wallpaper saved")
 } else {
   background.src = localStorage.getItem("background");
