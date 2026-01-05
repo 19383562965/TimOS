@@ -65,6 +65,7 @@ clockStartBtn.onclick = function() {
   dynamicIsland.style.width = "300px";
   dynamicIsland.style.height = "50px";
   dynamicIsland.style.top = "10px";
+  dynamicIsland.style.borderColor = "rgba(255, 114, 54, 1)";
   dynamicIsland.innerHTML = `<p id="dynamic-island-timer"></p>`;
   const timerDisplay = document.getElementById("dynamic-island-timer");
 
@@ -97,16 +98,18 @@ clockStartBtn.onclick = function() {
         dynamicIsland.style.height = "26px";
         dynamicIsland.style.top = "5px";
         dynamicIsland.innerHTML = "";
+        dynamicIsland.style.borderColor = "rgba(0, 0, 0, 1)";
       }, 3000);
     }
   }, 1000);
 
   // Shrink animation after 2 seconds
   shrinkTimeout = setTimeout(() => {
-    dynamicIsland.style.width = "200px";
+    dynamicIsland.style.width = "120px";
     dynamicIsland.style.height = "26px";
     dynamicIsland.style.top = "5px";
     timerDisplay.style.fontSize = "20px";
+    dynamicIsland.style.borderColor = "rgba(193, 87, 41, 1)";
   }, 2000);
 };
 
