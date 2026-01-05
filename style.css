@@ -265,15 +265,11 @@ body.dark-mode #dock .app-icon {
 }
 
 #settings {
-  background-image: url("images/app_icons/settings.jpg");
-}
-
-body.dark-mode #settings {
-  background-image: url("images/app_icons/dark_mode/settings.PNG");
+  background-image: url("images/app_icons/settings.png");
 }
 
 #app-store {
-  background-image: url("images/app_icons/app_store.jpg");
+  background-image: url("images/app_icons/app_store.png");
 }
 
 #browser {
@@ -281,20 +277,12 @@ body.dark-mode #settings {
   background-position: center;
 }
 
-body.dark-mode #app-store {
-  background-image: url("images/app_icons/dark_mode/app_store.PNG");
-}
-
 #photos {
   background-image: url("images/app_icons/photos.png");
 }
 
 #calculator {
-  background-image: url("images/app_icons/calculator.jpg");
-}
-
-body.dark-mode #calculator {
-  background-image: url("images/app_icons/dark_mode/calculator.PNG");
+  background-image: url("images/app_icons/calculator.png");
 }
 
 #mail {
