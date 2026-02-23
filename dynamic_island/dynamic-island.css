@@ -1,0 +1,50 @@
+#dynamic-island {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5px;
+  width: 96px;
+  height: 26px;
+  border-radius: 30px;
+  background-color: rgb(0, 0, 0);
+  z-index: 10;
+  border: solid 2px rgba(0, 0, 0, 0.5);
+  transition: 0.15s;
+  animation: dynamic-island-start 2s ease-out 0s;
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+#dynamic-island:hover {
+  width: 100px;
+  height: 28px;
+  transition: 0.1s;
+}
+#dynamic-island:active {
+  width: 110px;
+  height: 22.5px;
+  transition: 0.1s;
+  top: 1px;
+  transform: translateX(-50%) scale(0.99);
+}
+#dynamic-island-timer {
+  transition: 0.15s;
+  color: rgb(255, 123, 0);
+  font-size: 30px;
+}
+
+#dynamic-island-loading-icon {
+  animation-name: dynamicIslandLoadingIcon;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transition: 0s;
+}
+@keyframes dynamicIslandLoadingIcon {
+  0% {transform: rotate(0deg); opacity: 0;}
+  100% {transform: rotate(360deg); opacity: 0.6;}
+}

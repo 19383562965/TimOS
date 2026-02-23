@@ -1,0 +1,426 @@
+body {
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(0px);
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  transition: 1s, background-image 1s;
+  z-index: 1;
+}
+
+body::selection {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+}
+
+body.dark-mode::selection {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+}
+
+input:focus {
+  outline: none;
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#background {
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+  z-index: 0;
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  pointer-events: none;
+}
+
+#menu-bar {
+  display: flex;
+  position: fixed;
+  width: 99%;
+  top: 0;
+  left: 0;
+  height: 30px;
+  padding: 0 5px;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  justify-content: space-between;
+  transition: 0.2s;
+  border-radius: 0 0 10px 10px;
+}
+
+#menu-bar h1 {
+  font-size: 17px;
+  font-weight: 300;
+  display: flex;
+  margin: 0;
+}
+
+body.dark-mode #menu-bar {
+  color: white;
+}
+
+#menu-bar div {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#menu-bar div button {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  transition: 0.15s;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+
+body.dark-mode #menu-bar div button {
+  color: white;
+}
+#menu-bar div button {
+  color: rgb(0, 0, 0);
+}
+
+#menu-bar div button ion-icon {
+  font-size: 20px;
+}
+
+#control-center {
+  position: fixed;
+  display: flex;
+  width: 300px;
+  aspect-ratio: 4/5;
+  background-color: rgb(255, 255, 255, 0.2);
+  top: 40px;
+  right: 60px;
+  border-radius: 45px;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  transition: 0.2s;
+  border: solid 1px transparent;
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode #control-center {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+#control-center button {
+  width: 42%;
+  height: 60px;
+  border-radius: 35px;
+  margin: 0;
+  margin-top: 10px;
+  border: solid 1px transparent;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  font-size: 15px;
+  color: black;
+}
+
+body.dark-mode #control-center button {
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+#wallpapers {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 70%;
+  padding: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 40px 40px 0 0;
+  margin-bottom: 10px;
+  box-shadow: inset 0 100px 15px rgba(0, 0, 0, 0.3);
+}
+
+#wallpapers::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+#wallpapers::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+#wallpapers::-webkit-scrollbar {
+  width: 5px;
+  /* scrollbar width */
+}
+
+#wallpapers img {
+  width: 48%;
+  aspect-ratio: 3/2;
+  border-radius: 20px;
+}
+
+#dock {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  justify-content: center;
+  min-width: 100px;
+  background-color: rgb(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+  bottom: 20px;
+  border-radius: 32px;
+  padding: 10px;
+  height: 80px;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
+  border: solid 2px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode #dock {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid 2px rgba(255, 255, 255, 0.15);
+}
+
+#dock .app-icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 25px;
+  transition: margin 0.3s, transform 0.15s, 0.2s;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  cursor: default;
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  animation: none;
+}
+
+#dock .app-icon:hover {
+  transform: scale(1.3) translateY(-10px);
+  margin: 0 15px;
+}
+
+body.dark-mode #dock .app-icon {
+  background-color: rgba(34, 34, 34, 0.95);
+}
+#settings {
+  background-image: url("images/app_icons/settings.png");
+}
+
+#app-store {
+  background-image: url("images/app_icons/app_store.png");
+}
+
+#browser {
+  background-image: url("images/app_icons/safari.png");
+  background-position: center;
+}
+
+#photos {
+  background-image: url("images/app_icons/photos.png");
+}
+
+#calculator {
+  background-image: url("images/app_icons/calculator.png");
+}
+
+#mail {
+  background-image: url("images/app_icons/mail.jpg");
+}
+
+body.dark-mode #mail {
+  background-image: url("images/app_icons/dark_mode/mail.PNG");
+}
+
+#clock {
+  background-color: aliceblue;
+  position: relative;
+}
+
+body.dark-mode #clock {
+  background-color: black;
+}
+
+#chat-bot {
+  background-image: url("images/app_icons/chat_bot.png");
+}
+
+#clock::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(0, 0, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+body.dark-mode #clock::after {
+  background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(0, 0, 0);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  background-color: black;
+  border-radius: 10px;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.hour {
+  width: 3px;
+  height: 18px;
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+  transition: 0.5s;
+}
+body.dark-mode .hour {
+  background-color: rgb(255, 255, 255);
+}
+
+.minute {
+  width: 2px;
+  height: 25px;
+  background-color: rgb(3, 3, 3);
+  z-index: 4;
+  transition: 0.5s;
+}
+body.dark-mode .minute {
+  background-color: rgb(223, 223, 223);
+}
+
+.second {
+  width: 1.5px;
+  height: 30px;
+  background-color: rgb(255, 0, 0);
+  z-index: 5;
+  transition: 0.2s;
+}
+
+.clock-number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-origin: center;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  font-size: 10px;
+}
+body.dark-mode .clock-number {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.number1 {
+  transform: rotate(30deg) translateY(5px);
+}
+.number2 {
+  transform: rotate(60deg) translateY(5px);
+}
+.number3 {
+  transform: rotate(90deg) translateY(5px);
+}
+.number4 {
+  transform: rotate(120deg) translateY(5px);
+}
+.number5 {
+  transform: rotate(150deg) translateY(5px);
+}
+.number6 {
+  transform: rotate(180deg) translateY(5px);
+}
+.number7 {
+  transform: rotate(210deg) translateY(5px);
+}
+.number8 {
+  transform: rotate(240deg) translateY(5px);
+}
+.number9 {
+  transform: rotate(270deg) translateY(5px);
+}
+.number10 {
+  transform: rotate(300deg) translateY(5px);
+}
+.number11 {
+  transform: rotate(330deg) translateY(5px);
+}
+.number12 {
+  transform: rotate(360deg) translateY(5px);
+}
+
+body.dark-mode #calendar-icon-date {
+  color: white;
+}
+
+#files {
+  background-image: url("images/app_icons/files.png");
+}
+
+@media (max-width: 1500px) {
+  body {
+    width: 100%;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 1000px) {
+  body {
+    width: 100%;
+    height: 85vh;
+  }
+  #menu-bar {
+    height: 50px;
+  }
+  #dock {
+    height: 70px;
+  } 
+}
