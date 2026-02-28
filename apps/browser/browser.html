@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="browser.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>browser</title>
+</head>
+
+<body>
+  <input id="input" type="text" placeholder="Search...">
+  <button id="search-btn"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+  <div>
+    <button id="refresh"><ion-icon name="refresh-outline"></ion-icon></button>
+    <button id="menu"><ion-icon name="newspaper-outline"></ion-icon></button>
+  </div>
+  <section id="menu-catalog" style="display: none;">
+    <button>OnlineGames.io</button>
+    <button>HTML5Games.com</button>
+  </section>
+  <iframe id="iframe" src="" frameborder="0"></iframe>
+  <script src="browser.js"></script>
+</body>
+</html>
