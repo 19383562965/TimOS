@@ -1,5 +1,3 @@
-document.getElementById("news").click();
-
 const body = document.body;
 
 const menuBar = document.getElementById("menu-bar");
@@ -179,3 +177,5 @@ saveButton.onmousedown = function() {
   localStorage.setItem("background", background.src);
 };
 
+
+document.getElementById("news").click();
