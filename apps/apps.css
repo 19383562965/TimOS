@@ -1,0 +1,100 @@
+#photos-window .window-content {
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+#photos-window .window-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+#photos-window .window-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+#photos-window .window-content::-webkit-scrollbar {
+  width: 5px;
+  /* scrollbar width */
+}
+
+#photos-window .window-content div {
+  gap: 0px;
+  width: 90%;
+  min-width: 422px;
+}
+
+#photos-window .window-content div img {
+  min-width: 100px;
+  width: 9%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: solid 1px white;
+  outline: solid 1px rgb(255, 255, 255);
+  margin: 0;
+  transition: 0.15s;
+  border-radius: 0px;
+}
+
+#photos-window .window-content div img:hover {
+  transform: scale(1.05);
+}
+
+#files-window .window-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+#files-window .window-content::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 99, 99, 0.3);
+  border-radius: 10px;
+}
+
+#files-window .window-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(119, 119, 119, 0.5);
+  border-radius: 10px;
+}
+
+#files-window .window-content::-webkit-scrollbar {
+  width: 5px;
+  /* scrollbar width */
+}
+
+#files-window .window-content div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 200px;
+  cursor: default;
+}
+
+#files-window .window-content div img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 0;
+  border-radius: 20px;
+}
+
+#files-window .window-content div p {
+  width: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+#browser-window {
+  width: 600px;
+  height: 400px;
+}
+#calculator-window {
+  width: 350px;
+  height: 550px;
+}
+
+#chat-bot-window {
+  width: 300px;
+  height: 450px;
+}

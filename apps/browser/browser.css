@@ -1,0 +1,33 @@
+#search-parent {
+  background-color: rgba(128, 128, 128, 0.5);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  gap: 10px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+#browser-search {
+  height: 40px;
+  background-color: rgba(160, 160, 160, 0.5) ;
+  border: solid 2px rgba(170, 170, 170, 0.5);
+  border-radius: 22px;
+  font-size: 25px;
+  padding: 0 10px;
+  width: 100%;
+}
+#browser-search-btn {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(160, 160, 160, 0.5);
+  border: solid 2px rgba(170, 170, 170, 0.5);
+  border-radius: 22px;
+}
+#browser-iframe {
+  height: 80%;
+  width: 100%;
+  background-color: rgba(0, 0, 0,0.5);
+  border-radius: 22px;
+}
